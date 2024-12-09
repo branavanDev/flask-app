@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-600">DevPortfolio</a>
+            <div class="space-x-4">
+                <a href="/" class="hover:text-blue-600">Home</a>
+                <a href="/projects" class="hover:text-blue-600">Projects</a>
+                <a href="/contact" class="hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">My Projects</h1>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+            {% for project in projects %}
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4">{{ project.title }}</h2>
+                <p class="text-gray-600 mb-4">{{ project.description }}</p>
+                
+                <div class="mb-4">
+                    <strong>Technologies:</strong>
+                    <div class="flex flex-wrap mt-2">
+                        {% for tech in project.technologies %}
+                        <span class="bg-blue-100 text-blue-800 text-sm px-2 py-1 rounded mr-2 mb-2">
+                            {{ tech }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="{{ project.github_link }}" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700">
+                        GitHub
+                    </a>
+                    <a href="{{ project.demo_link }}" target="_blank" class="border border-blue-600 text-blue-600 px-4 py-2 rounded hover:bg-blue-50">
+                        Live Demo
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer class="bg-white shadow-md mt-8">
+        <div class="container mx-auto px-4 py-4 text-center">
+            <p>&copy; 2024 Developer Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
