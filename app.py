@@ -10,7 +10,7 @@ projects = [
         "title": "E-Commerce Platform",
         "description": "Full-stack responsive e-commerce website with payment integration.",
         "technologies": ["React", "Node.js", "MongoDB"],
-        "github_link": "https://github.com/example/ecommerce",
+        "github_link": "https://github.com/branavanDev/flask-app",
         "demo_link": "https://demo-ecommerce.com",
         "created_at": datetime.now()
     },
@@ -19,8 +19,17 @@ projects = [
         "title": "Machine Learning Dashboard",
         "description": "Interactive dashboard for real-time ML model performance tracking.",
         "technologies": ["Python", "Flask", "TensorFlow", "Chart.js"],
-        "github_link": "https://github.com/example/ml-dashboard",
+        "github_link": "https://github.com/branavanDev/flask-app",
         "demo_link": "https://ml-dashboard.com",
+        "created_at": datetime.now()
+    },
+     {
+        "id": 3,
+        "title": "BRN portfolio",
+        "description": "Full-stack responsive e-commerce website with payment integration.",
+        "technologies": ["React", "Node.js", "MongoDB"],
+        "github_link": "https://github.com/branavanDev/flask-app",
+        "demo_link": "https://demo-ecommerce.com",
         "created_at": datetime.now()
     }
 ]
